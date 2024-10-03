@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dibtko6dxyhr2"
+path.s3tc="res://.godot/imported/arbre_1.png-cfd2d24aada9482020343c1ebe1098b2.s3tc.ctex"
 path.etc2="res://.godot/imported/arbre_1.png-cfd2d24aada9482020343c1ebe1098b2.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/arbre_1.png"
-dest_files=["res://.godot/imported/arbre_1.png-cfd2d24aada9482020343c1ebe1098b2.etc2.ctex"]
+dest_files=["res://.godot/imported/arbre_1.png-cfd2d24aada9482020343c1ebe1098b2.s3tc.ctex", "res://.godot/imported/arbre_1.png-cfd2d24aada9482020343c1ebe1098b2.etc2.ctex"]
 
 [params]
 

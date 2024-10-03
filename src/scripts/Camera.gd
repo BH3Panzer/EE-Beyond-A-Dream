@@ -8,4 +8,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if get_viewport().get_mouse_position() >
+	if get_viewport().get_mouse_position().x > get_viewport().size.x/32*30:
+		get_parent_node_3d().position.x += camera_speed * delta
+		
+	elif get_viewport().get_mouse_position().x < get_viewport().size.x/32*2:
+		get_parent_node_3d().position.x -= camera_speed * delta
+		
+	elif get_viewport().get_mouse_position().y < get_viewport().size.y/32*2:
+		get_parent_node_3d().position.z -= camera_speed * delta
+		
+	elif get_viewport().get_mouse_position().y > get_viewport().size.y/32*30:
+		get_parent_node_3d().position.z += camera_speed * delta
