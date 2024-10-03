@@ -49,3 +49,15 @@ surface_material_override/0 = SubResource("StandardMaterial3D_asqhb")
 
 [node name="blockbench_export" parent="." instance=ExtResource("2_f1xbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.690072, 2.08165e-12, -2.47017)
+
+[node name="blockbench_export2" parent="." instance=ExtResource("2_f1xbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.88256, 2.08165e-12, -0.641811)
+
+[node name="blockbench_export3" parent="." instance=ExtResource("2_f1xbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95414, 2.08165e-12, 0.2601)
+
+[node name="blockbench_export4" parent="." instance=ExtResource("2_f1xbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41625, 2.08165e-12, 0.2601)
+
+[node name="blockbench_export5" parent="." instance=ExtResource("2_f1xbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41625, 2.08165e-12, 3.59294)
