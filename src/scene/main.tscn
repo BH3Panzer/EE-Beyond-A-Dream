@@ -64,4 +64,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41625, 2.08165e-12, 0.2601
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41625, 2.08165e-12, 3.59294)
 
 [node name="blockbench_export6" parent="." instance=ExtResource("4_wk747")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.382477, 0, 0.615198)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.60555, 0, -1.79114)
+
+[node name="blockbench_export7" parent="." instance=ExtResource("4_wk747")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.79773, 0, 0.615198)
