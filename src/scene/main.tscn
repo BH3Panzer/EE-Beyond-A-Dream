@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dmju6sihnst6s"]
+[gd_scene load_steps=9 format=3 uid="uid://dmju6sihnst6s"]
 
-[ext_resource type="Texture2D" uid="uid://d2bvy8bjmm4sk" path="res://assets/textures/grounds/grass.png" id="1_b7047"]
-[ext_resource type="Script" path="res://src/scripts/Camera.gd" id="1_l07ig"]
+[ext_resource type="Script" path="res://src/scripts/rts_controller.gd" id="1_ct4pg"]
+[ext_resource type="Material" uid="uid://b85ivvmb7k3h0" path="res://assets/materials/groundGrass.tres" id="2_2milr"]
 [ext_resource type="PackedScene" uid="uid://louolccrs4lf" path="res://assets/models/arbre.gltf" id="2_f1xbp"]
 [ext_resource type="PackedScene" uid="uid://ce6ap0j8c6gys" path="res://assets/models/foodSpot.gltf" id="4_wk747"]
 
@@ -20,33 +20,31 @@ tonemap_mode = 2
 [sub_resource type="PlaneMesh" id="PlaneMesh_cheyu"]
 size = Vector2(200, 200)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asqhb"]
-shading_mode = 0
-albedo_texture = ExtResource("1_b7047")
-albedo_texture_force_srgb = true
-uv1_scale = Vector3(500, 500, 1)
-texture_filter = 0
-grow_amount = -4.638
-
 [node name="Main" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 12.3854, 0)
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 30, 0)
+light_color = Color(0.994108, 0.994108, 0.994108, 1)
 shadow_enabled = true
+directional_shadow_mode = 0
+
+[node name="RTSController" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.22325, 10.3188)
+script = ExtResource("1_ct4pg")
+min_zoom = 1
+max_zoom = 300
+
+[node name="Elevation" type="Node3D" parent="RTSController"]
+
+[node name="Camera3D" type="Camera3D" parent="RTSController/Elevation"]
+transform = Transform3D(1, 0, 0, 0, 0.713947, 0.700199, 0, -0.700199, 0.713947, 0, 0, -2.78182)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2vyor")
 
-[node name="cameraControl" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.05333, 6.89248)
-
-[node name="Camera" type="Camera3D" parent="cameraControl"]
-transform = Transform3D(1, 0, 0, 0, 0.666337, 0.74565, 0, -0.74565, 0.666337, 0, 0, 0)
-script = ExtResource("1_l07ig")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_cheyu")
-surface_material_override/0 = SubResource("StandardMaterial3D_asqhb")
+surface_material_override/0 = ExtResource("2_2milr")
 
 [node name="blockbench_export" parent="." instance=ExtResource("2_f1xbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.690072, 2.08165e-12, -2.47017)
