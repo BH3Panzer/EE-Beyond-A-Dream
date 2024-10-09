@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dmju6sihnst6s"]
 
-[ext_resource type="Script" path="res://src/scripts/rts_controller.gd" id="1_ct4pg"]
+[ext_resource type="PackedScene" uid="uid://br6xmt72gk6sa" path="res://src/scene/RtsCameraController.tscn" id="1_0aerw"]
 [ext_resource type="Material" uid="uid://b85ivvmb7k3h0" path="res://assets/materials/groundGrass.tres" id="2_2milr"]
 [ext_resource type="PackedScene" uid="uid://louolccrs4lf" path="res://assets/models/arbre.gltf" id="2_f1xbp"]
 [ext_resource type="PackedScene" uid="uid://ce6ap0j8c6gys" path="res://assets/models/foodSpot.gltf" id="4_wk747"]
@@ -28,16 +28,7 @@ light_color = Color(0.994108, 0.994108, 0.994108, 1)
 shadow_enabled = true
 directional_shadow_mode = 0
 
-[node name="RTSController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.22325, 10.3188)
-script = ExtResource("1_ct4pg")
-min_zoom = 1
-max_zoom = 300
-
-[node name="Elevation" type="Node3D" parent="RTSController"]
-
-[node name="Camera3D" type="Camera3D" parent="RTSController/Elevation"]
-transform = Transform3D(1, 0, 0, 0, 0.713947, 0.700199, 0, -0.700199, 0.713947, 0, 0, -2.78182)
+[node name="RtsCameraController" parent="." instance=ExtResource("1_0aerw")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2vyor")
