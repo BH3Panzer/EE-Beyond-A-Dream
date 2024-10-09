@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmju6sihnst6s"]
+[gd_scene load_steps=10 format=3 uid="uid://dmju6sihnst6s"]
 
 [ext_resource type="PackedScene" uid="uid://br6xmt72gk6sa" path="res://src/scene/RtsCameraController.tscn" id="1_0aerw"]
-[ext_resource type="Material" uid="uid://b85ivvmb7k3h0" path="res://assets/materials/groundGrass.tres" id="2_2milr"]
 [ext_resource type="PackedScene" uid="uid://louolccrs4lf" path="res://assets/models/arbre.gltf" id="2_f1xbp"]
+[ext_resource type="Texture2D" uid="uid://de2rsf0w7y30u" path="res://assets/textures/grounds/grass.png" id="2_mlu7o"]
 [ext_resource type="PackedScene" uid="uid://ce6ap0j8c6gys" path="res://assets/models/foodSpot.gltf" id="4_wk747"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ha7eb"]
@@ -20,6 +20,23 @@ tonemap_mode = 2
 [sub_resource type="PlaneMesh" id="PlaneMesh_cheyu"]
 size = Vector2(200, 200)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44d83"]
+diffuse_mode = 1
+specular_mode = 1
+albedo_texture = ExtResource("2_mlu7o")
+albedo_texture_force_srgb = true
+emission = Color(0.0866516, 0.257087, 0, 1)
+rim = 0.17
+rim_tint = 1.0
+clearcoat = 0.1
+clearcoat_roughness = 0.82
+ao_enabled = true
+backlight = Color(0.947199, 0.947199, 0.947199, 1)
+refraction_scale = 0.66
+uv1_scale = Vector3(500, 500, 1)
+texture_filter = 2
+grow_amount = -7.42
+
 [node name="Main" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -35,7 +52,7 @@ environment = SubResource("Environment_2vyor")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_cheyu")
-surface_material_override/0 = ExtResource("2_2milr")
+surface_material_override/0 = SubResource("StandardMaterial3D_44d83")
 
 [node name="blockbench_export" parent="." instance=ExtResource("2_f1xbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.690072, 2.08165e-12, -2.47017)

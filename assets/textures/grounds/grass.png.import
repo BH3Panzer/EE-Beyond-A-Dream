@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tducbw3s746m"
-path.s3tc="res://.godot/imported/Ground037_1K-JPG_AmbientOcclusion.jpg-609d6dc3d911b3f021a9e0d00bbddde3.s3tc.ctex"
-path.etc2="res://.godot/imported/Ground037_1K-JPG_AmbientOcclusion.jpg-609d6dc3d911b3f021a9e0d00bbddde3.etc2.ctex"
+uid="uid://de2rsf0w7y30u"
+path.s3tc="res://.godot/imported/grass.png-81546c470eb01c433d663b883eb16724.s3tc.ctex"
+path.etc2="res://.godot/imported/grass.png-81546c470eb01c433d663b883eb16724.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/grounds/ground37/Ground037_1K-JPG_AmbientOcclusion.jpg"
-dest_files=["res://.godot/imported/Ground037_1K-JPG_AmbientOcclusion.jpg-609d6dc3d911b3f021a9e0d00bbddde3.s3tc.ctex", "res://.godot/imported/Ground037_1K-JPG_AmbientOcclusion.jpg-609d6dc3d911b3f021a9e0d00bbddde3.etc2.ctex"]
+source_file="res://assets/textures/grounds/grass.png"
+dest_files=["res://.godot/imported/grass.png-81546c470eb01c433d663b883eb16724.s3tc.ctex", "res://.godot/imported/grass.png-81546c470eb01c433d663b883eb16724.etc2.ctex"]
 
 [params]
 
