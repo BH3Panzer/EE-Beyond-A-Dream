@@ -28,7 +28,6 @@ albedo_texture = ExtResource("2_mlu7o")
 albedo_texture_force_srgb = true
 emission = Color(0.0866516, 0.257087, 0, 1)
 normal_enabled = true
-normal_scale = -1.0
 normal_texture = ExtResource("3_lk1ax")
 rim = 0.17
 rim_tint = 1.0
