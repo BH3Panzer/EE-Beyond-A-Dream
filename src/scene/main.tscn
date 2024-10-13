@@ -1,61 +1,43 @@
-[gd_scene load_steps=11 format=3 uid="uid://dmju6sihnst6s"]
+[gd_scene load_steps=9 format=3 uid="uid://dmju6sihnst6s"]
 
 [ext_resource type="PackedScene" uid="uid://br6xmt72gk6sa" path="res://src/scene/RtsCameraController.tscn" id="1_0aerw"]
 [ext_resource type="PackedScene" uid="uid://louolccrs4lf" path="res://assets/models/arbre.gltf" id="2_f1xbp"]
-[ext_resource type="Texture2D" uid="uid://de2rsf0w7y30u" path="res://assets/textures/grounds/grass.png" id="2_mlu7o"]
-[ext_resource type="Texture2D" uid="uid://mpnw0va7ic65" path="res://assets/textures/grounds/grass.png_normal.png" id="3_lk1ax"]
+[ext_resource type="Material" uid="uid://cpecnyo8sqxa6" path="res://assets/materials/grass.tres" id="3_5ubpd"]
 [ext_resource type="PackedScene" uid="uid://ce6ap0j8c6gys" path="res://assets/models/foodSpot.gltf" id="4_wk747"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ha7eb"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ykkf8"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="Sky" id="Sky_ydlgb"]
-sky_material = SubResource("ProceduralSkyMaterial_ha7eb")
+[sub_resource type="Sky" id="Sky_aoygo"]
+sky_material = SubResource("ProceduralSkyMaterial_ykkf8")
 
-[sub_resource type="Environment" id="Environment_2vyor"]
+[sub_resource type="Environment" id="Environment_n8817"]
 background_mode = 2
-sky = SubResource("Sky_ydlgb")
-tonemap_mode = 2
+sky = SubResource("Sky_aoygo")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_cheyu"]
 size = Vector2(200, 200)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44d83"]
-diffuse_mode = 1
-specular_mode = 1
-albedo_texture = ExtResource("2_mlu7o")
-albedo_texture_force_srgb = true
-emission = Color(0.0866516, 0.257087, 0, 1)
-normal_enabled = true
-normal_texture = ExtResource("3_lk1ax")
-rim = 0.17
-rim_tint = 1.0
-clearcoat = 0.1
-clearcoat_roughness = 0.82
-ao_enabled = true
-backlight = Color(0.947199, 0.947199, 0.947199, 1)
-refraction_scale = 0.66
-uv1_scale = Vector3(200, 200, 1)
-texture_filter = 2
-grow_amount = -7.42
-
 [node name="Main" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_n8817")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 30, 0)
+transform = Transform3D(-0.866025, -0.129411, 0.482964, 0.250001, -0.948588, 0.194112, 0.433011, 0.288846, 0.853857, 0, 30, 0)
 light_color = Color(0.994108, 0.994108, 0.994108, 1)
+light_energy = 0.8
+light_angular_distance = 10.0
 shadow_enabled = true
 directional_shadow_mode = 0
 
 [node name="RtsCameraController" parent="." instance=ExtResource("1_0aerw")]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_2vyor")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("PlaneMesh_cheyu")
-surface_material_override/0 = SubResource("StandardMaterial3D_44d83")
+surface_material_override/0 = ExtResource("3_5ubpd")
 
 [node name="blockbench_export" parent="." instance=ExtResource("2_f1xbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.690072, 2.08165e-12, -2.47017)
@@ -65,6 +47,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.88256, 2.08165e-12, -0.6418
 
 [node name="blockbench_export3" parent="." instance=ExtResource("2_f1xbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95414, 2.08165e-12, 0.2601)
+
+[node name="blockbench_export8" parent="." instance=ExtResource("2_f1xbp")]
+transform = Transform3D(0.907807, 0, -0.419389, 0, 1, 0, 0.419389, 0, 0.907807, -0.154762, 2.08165e-12, 2.83257)
+
+[node name="blockbench_export9" parent="." instance=ExtResource("2_f1xbp")]
+transform = Transform3D(0.12606, 0, 0.992023, 0, 1, 0, -0.992023, 0, 0.12606, -3.76434, 2.08165e-12, -1.06519)
+
+[node name="blockbench_export10" parent="." instance=ExtResource("2_f1xbp")]
+transform = Transform3D(0.708648, 0, 0.705562, 0, 1, 0, -0.705562, 0, 0.708648, -3.7194, 2.08165e-12, -6.17963)
+
+[node name="blockbench_export11" parent="." instance=ExtResource("2_f1xbp")]
+transform = Transform3D(0.763728, 0, -0.645538, 0, 1, 0, 0.645538, 0, 0.763728, 3.89508, 2.08165e-12, 3.24825)
+
+[node name="blockbench_export12" parent="." instance=ExtResource("2_f1xbp")]
+transform = Transform3D(0.453975, 0, -0.891015, 0, 1, 0, 0.891015, 0, 0.453975, -3.26768, 2.08165e-12, 2.79164)
+
+[node name="blockbench_export13" parent="." instance=ExtResource("2_f1xbp")]
+transform = Transform3D(-0.371368, 0, -0.928486, 0, 1, 0, 0.928486, 0, -0.371368, 2.57208, 2.08165e-12, -5.39677)
 
 [node name="blockbench_export4" parent="." instance=ExtResource("2_f1xbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41625, 2.08165e-12, 0.2601)

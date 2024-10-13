@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cpecnyo8sqxa6"]
+
+[ext_resource type="Shader" path="res://assets/shaders/repeat.gdshader" id="1_iavdr"]
+[ext_resource type="Texture2D" uid="uid://de2rsf0w7y30u" path="res://assets/textures/grounds/grass.png" id="2_qa84o"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_iavdr")
+shader_parameter/tiling = 256.0
+shader_parameter/randomize_rotation = 8.0
+shader_parameter/albedo_texture = ExtResource("2_qa84o")
