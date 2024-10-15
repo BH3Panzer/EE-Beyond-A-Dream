@@ -6,6 +6,6 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_iavdr")
-shader_parameter/tiling = 256.0
+shader_parameter/tiling = 128.0
 shader_parameter/randomize_rotation = 8.0
 shader_parameter/albedo_texture = ExtResource("2_qa84o")
