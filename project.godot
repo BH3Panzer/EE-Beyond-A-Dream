@@ -23,6 +23,10 @@ config/icon="res://icon.png"
 
 window/size/mode=3
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gaea/plugin.cfg")
+
 [importer_defaults]
 
 texture={
