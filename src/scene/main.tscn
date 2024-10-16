@@ -32,6 +32,7 @@ directional_shadow_mode = 0
 environment = SubResource("Environment_yxl45")
 
 [node name="RtsCameraController" parent="." instance=ExtResource("1_0aerw")]
+movement_speed = 50.0
 min_zoom = 5.0
 max_zoom = 50.0
 zoom_speed = 50.0
