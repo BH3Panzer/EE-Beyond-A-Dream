@@ -1,9 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmju6sihnst6s"]
+[gd_scene load_steps=5 format=3 uid="uid://dmju6sihnst6s"]
 
 [ext_resource type="PackedScene" uid="uid://br6xmt72gk6sa" path="res://src/scene/RtsCameraController.tscn" id="1_0aerw"]
-[ext_resource type="Material" uid="uid://cpecnyo8sqxa6" path="res://assets/materials/grass.tres" id="3_5ubpd"]
-[ext_resource type="PackedScene" uid="uid://ce6ap0j8c6gys" path="res://assets/models/foodSpot.gltf" id="4_wk747"]
-[ext_resource type="PackedScene" uid="uid://bfej8hybrjsm3" path="res://assets/models/rockSpot.gltf" id="5_qcau2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3ylve"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -15,9 +12,6 @@ sky_material = SubResource("ProceduralSkyMaterial_3ylve")
 [sub_resource type="Environment" id="Environment_yxl45"]
 background_mode = 2
 sky = SubResource("Sky_gcjn2")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_cheyu"]
-size = Vector2(200, 200)
 
 [node name="Main" type="Node3D"]
 
@@ -36,23 +30,3 @@ min_zoom = 5.0
 max_zoom = 50.0
 zoom_speed = 50.0
 allow_rotation = false
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-mesh = SubResource("PlaneMesh_cheyu")
-surface_material_override/0 = ExtResource("3_5ubpd")
-
-[node name="blockbench_export6" parent="." instance=ExtResource("4_wk747")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.60555, 0, -8.86358)
-
-[node name="blockbench_export7" parent="." instance=ExtResource("4_wk747")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79773, 0, 9.28486)
-
-[node name="blockbench_export14" parent="." instance=ExtResource("5_qcau2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.32972, 0, 10.4934)
-
-[node name="blockbench_export15" parent="." instance=ExtResource("5_qcau2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6589, 0, 2.22607)
-
-[node name="blockbench_export16" parent="." instance=ExtResource("5_qcau2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.41382, 0, -5.13462)

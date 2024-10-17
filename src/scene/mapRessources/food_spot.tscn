@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4dtsxii8yx74"]
+
+[ext_resource type="PackedScene" uid="uid://ce6ap0j8c6gys" path="res://assets/models/foodSpot.gltf" id="1_lob82"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xdcso"]
+size = Vector3(5, 1, 5)
+
+[node name="FoodSpot" type="Node3D"]
+
+[node name="model" parent="." instance=ExtResource("1_lob82")]
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_xdcso")
