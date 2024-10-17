@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjsht4xocphak"]
+
+[ext_resource type="Script" path="res://src/scripts/main_menu.gd" id="1_1xa7v"]
+[ext_resource type="Texture2D" uid="uid://8tbo2e04chng" path="res://icon_transparent.png" id="1_nr73c"]
+[ext_resource type="Texture2D" uid="uid://j3s1qcdlrafm" path="res://assets/textures/buttons/play_test.png" id="2_x8qqn"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1xa7v")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 646.0
+color = Color(0.629675, 0.629675, 0.629675, 1)
+
+[node name="IconTransparent" type="Sprite2D" parent="."]
+position = Vector2(578, 120)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_nr73c")
+
+[node name="PlayTestButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 271.0
+offset_right = 833.0
+offset_bottom = 479.0
+icon = ExtResource("2_x8qqn")
