@@ -59,7 +59,7 @@ modifiers = Array[ExtResource("4_262vm")]([null])
 [node name="Main" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.814116, 0.287714, -0.504417, 0, 0.868632, 0.495459, 0.580703, 0.403361, -0.707166, 0, 0, 0)
+transform = Transform3D(-0.638388, 0.211455, -0.7401, 0.0248067, 0.966677, 0.254793, 0.769315, 0.144297, -0.62236, 0, 49, 0)
 shadow_enabled = true
 directional_shadow_mode = 0
 
