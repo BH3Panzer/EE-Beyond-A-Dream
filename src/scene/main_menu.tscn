@@ -14,20 +14,25 @@ grow_vertical = 2
 script = ExtResource("1_1xa7v")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 646.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.629675, 0.629675, 0.629675, 1)
 
 [node name="IconTransparent" type="Sprite2D" parent="."]
-position = Vector2(578, 120)
-scale = Vector2(0.5, 0.5)
+position = Vector2(360, 49)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_nr73c")
 
 [node name="PlayTestButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 325.0
-offset_top = 271.0
-offset_right = 833.0
-offset_bottom = 479.0
+offset_left = 234.0
+offset_top = 169.0
+offset_right = 742.0
+offset_bottom = 377.0
+scale = Vector2(0.5, 0.5)
 icon = ExtResource("2_x8qqn")

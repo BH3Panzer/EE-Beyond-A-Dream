@@ -14,14 +14,16 @@ config/name="EE-Beyond-A-Dream"
 config/tags=PackedStringArray("compat", "low_poly", "rts")
 run/main_scene="res://src/scene/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-run/max_fps=120
+run/max_fps=60
+run/low_processor_mode=true
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://icon.png"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/mode=3
+window/size/viewport_width=720
+window/size/viewport_height=405
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://assets/textures/cursor.png"
 
@@ -101,6 +103,8 @@ textures/canvas_textures/default_texture_filter=3
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_s3tc_bptc=true
+lights_and_shadows/directional_shadow/size=1024
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
 textures/default_filters/anisotropic_filtering_level=0
 textures/decals/filter=0
 textures/light_projectors/filter=0

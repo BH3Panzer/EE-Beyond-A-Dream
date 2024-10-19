@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1ag06vq4j81l"
 path.s3tc="res://.godot/imported/rockSpot_6.png-5c53ac317ad178a4cc08f0efd9564800.s3tc.ctex"
+path.etc2="res://.godot/imported/rockSpot_6.png-5c53ac317ad178a4cc08f0efd9564800.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/rockSpot_6.png"
-dest_files=["res://.godot/imported/rockSpot_6.png-5c53ac317ad178a4cc08f0efd9564800.s3tc.ctex"]
+dest_files=["res://.godot/imported/rockSpot_6.png-5c53ac317ad178a4cc08f0efd9564800.s3tc.ctex", "res://.godot/imported/rockSpot_6.png-5c53ac317ad178a4cc08f0efd9564800.etc2.ctex"]
 
 [params]
 
